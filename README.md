@@ -7,6 +7,11 @@
 ### 用途:
 透過Python將CSV中的車牌放到最後一個欄位
 
+本腳本實現
+1. 讀取CSV
+2. 透過REGEX(正規表示式)撈取特定資料並新增到最後一行
+3. 匯出CSV
+
 ### 用法:
 ```
 python3 transLicensePlate.py [<來源=data.csv> [<匯出的檔案名稱=report.csv>]]
