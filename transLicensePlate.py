@@ -7,6 +7,14 @@ fileName = sys.argv[1] if len(sys.argv) > 1 else 'data.csv'
 # 處理後另存檔案
 reportName = sys.argv[2] if len(sys.argv) > 2 else 'report.csv'
 
+# 解決大檔按導致的錯誤
+maxInt = sys.maxsize
+try:
+    csv.field_size_limit(maxInt)
+    break
+except OverflowError:
+    maxInt = int(maxInt/10)
+
 # 開啟原始 CSV 檔案
 file = open(fileName, encoding='utf8')
 rows = csv.reader(file)
