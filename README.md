@@ -23,10 +23,11 @@ python3 transLicensePlate.py [<來源=data.csv> [<匯出的檔案名稱=report.c
 透過Python合併多個Excel中的多個Sheet到CSV檔，
 
 本腳本實現
-1. 讀取Excel
-2. 讀取每個Sheet
-3. 忽略開頭指定行數
-4. 另存成CSV
+1. 取得指定資料夾內的所有xlsx/xls
+2. 讀取Excel
+3. 讀取每個Sheet
+4. 忽略開頭指定行數
+5. 另存成CSV
 ### 用法:
 ```python=
 python3 MergeExcelToCsv.py [<要忽略的行數=0> [<相對路徑=./> [<匯出的檔案名稱=export.csv>]]]
