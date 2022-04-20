@@ -43,4 +43,4 @@ print("輸出最終結果")
 print(mergeData)
 
 # 匯出成csv
-#mergeData.to_csv(reportName, index=False)
+mergeData.to_csv(reportName, index=False)
