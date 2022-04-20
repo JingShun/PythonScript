@@ -15,7 +15,8 @@ python3 transLicensePlate.py [<來源=data.csv> [<匯出的檔案名稱=report.c
 
 ## MergeExcelToCsv.py
 ### 用途:
-透過Python合併多個Excel中的多個Sheet到CSV檔
+透過Python合併多個Excel中的多個Sheet到CSV檔，
+
 本腳本實現
 1. 讀取Excel
 2. 讀取每個Sheet
