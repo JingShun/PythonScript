@@ -29,6 +29,9 @@ python3 MergeExcelToCsv.py [<要忽略的行數=0> [<相對路徑=./> [<匯出�
 python3 MergeExcelToCsv.py 3 ./ export.csv
 ```
 
+### 備註
+1. 目前已知若路徑有特殊符號，會讀不到檔案
+
 
 ## virustotal-search.py
 ### 用途:
