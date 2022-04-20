@@ -34,7 +34,7 @@ python3 MergeExcelToCsv.py 3 ./ export.csv
 ### 用途:
 將md5清單上傳到VirusTotal進行驗證
 
-copy by DidierStevens/DidierStevens
+copy by [DidierStevens/DidierStevensSuite](https://github.com/DidierStevens/DidierStevensSuite)
 
 原始RAW: https://raw.githubusercontent.com/DidierStevens/DidierStevensSuite/master/virustotal-search.py
 
