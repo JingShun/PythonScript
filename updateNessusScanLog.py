@@ -38,6 +38,33 @@ urllib3.disable_warnings()
 #########################
 # Nessus
 #########################
+
+
+def check_nessus_alive():
+    """確認Nessus可以連線
+
+    Returns:
+        bool: _description_
+    """
+    try:
+        response = requests.get(
+            nessusBaseURL + "/server/status", verify=False, timeout=5
+        )
+        if response.status_code == 200:
+            status = response.json().get("status")
+            if status == "ready":
+                print("[✓] Nessus Server Ready")
+                return True
+            else:
+                print("[!] Nessus Server status: " + status)
+        else:
+            print(f"[!] Unexpected status code: {response.status_code}")
+    except requests.exceptions.RequestException as e:
+        print(f"[X] 無法連線到 Nessus Server: {e}")
+
+    return False
+
+
 # 取得Token(登入)
 def get_token():
     """取得Token
@@ -238,6 +265,10 @@ def save_to_nessus_db(row, cursor, now=None):
         (host, plugin_id, protocol, port, name, risk, plugin_output, now),
     )
 
+
+if check_nessus_alive() is False:
+    print("結束腳本")
+    exit()
 
 # 建立MySQL連線
 conn = mysql.connector.connect(
